@@ -154,8 +154,8 @@ export const experiences: Experience[] = [
     type: 'Contract',
     description:
       'Developing and maintaining back-end systems for insurance applications using Robot Framework, TypeScript, and other modern technologies. Collaborate with cross-functional teams to improve system performance, automate testing, and deliver scalable, secure solutions.',
-    logo: '🛡️',
-    logoColor: 'bg-blue-600',
+    logo: '/logos/tokio-logo.png',
+    logoColor: 'bg-cyan-600',
   },
   {
     id: '2',
@@ -167,7 +167,7 @@ export const experiences: Experience[] = [
     type: 'Contract',
     description:
       'Built and enhanced enterprise-level applications using TypeScript and Angular. Worked closely with stakeholders to design, develop, and deploy new features while optimizing performance and ensuring maintainable, high-quality code.',
-    logo: '💧',
+    logo: '/logos/ptt-logo.png',
     logoColor: 'bg-cyan-600',
   },
   {
@@ -180,7 +180,7 @@ export const experiences: Experience[] = [
     type: 'Freelance',
     description:
       'Developed and maintained web applications using TypeScript and Angular to support research projects and digital initiatives. Delivered responsive, user-friendly interfaces and ensured cross-browser compatibility.',
-    logo: '💻',
+    logo: '/logos/iice-logo.webp',
     logoColor: 'bg-gray-600',
   },
 ];

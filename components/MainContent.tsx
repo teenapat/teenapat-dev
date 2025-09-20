@@ -6,6 +6,7 @@ import { Briefcase, FolderOpen, GraduationCap } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import '../lib/i18n';
 import ExperienceTab from './ExperienceTab';
+import ProjectsTab from './ProjectsTab';
 
 export default function MainContent() {
   const { t } = useTranslation();
@@ -50,10 +51,7 @@ export default function MainContent() {
           </TabsContent>
 
           <TabsContent value="projects">
-            <div className="text-center py-12">
-              <FolderOpen size={48} className="mx-auto text-gray-300 dark:text-gray-600 mb-4" />
-              <p className="text-gray-500 dark:text-gray-400">Projects information would be displayed here.</p>
-            </div>
+            <ProjectsTab />
           </TabsContent>
         </Tabs>
       </CardContent>

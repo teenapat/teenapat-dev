@@ -1,14 +1,23 @@
 "use client";
 
 import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
 import { experiences, volunteerWork } from '@/data/profile';
 import { Briefcase, Calendar, Heart, MapPin } from 'lucide-react';
+import Image from 'next/image';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import '../lib/i18n';
+import Pagination from './Pagination';
 
 export default function ExperienceTab() {
   const { t } = useTranslation();
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 3;
+
+  const totalPages = Math.ceil(experiences.length / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const currentExperiences = experiences.slice(startIndex, startIndex + itemsPerPage);
 
   return (
     <div className="space-y-6">
@@ -17,10 +26,18 @@ export default function ExperienceTab() {
           <h3 className="text-xl font-bold">{t('profile.experience')}</h3>
         </div>
         
-        {experiences.map((exp, index) => (
-          <div key={exp.id} className="border-l-2 border-gray-200 dark:border-gray-700 pl-6 pb-6 relative">
-            <div className={`absolute -left-2 top-0 w-4 h-4 ${exp.logoColor} rounded-full flex items-center justify-center`}>
-              <span className="text-white text-xs font-bold">{exp.logo}</span>
+        {currentExperiences.map((exp) => (
+          <div key={exp.id} className="relative pl-6 pb-6">
+            <div className="absolute left-0 top-9 bottom-0 border-l-2 border-gray-200 dark:border-gray-700"></div>
+
+            <div className={`absolute -left-5 top-0 w-10 h-10 ${exp.logoColor} rounded-full flex items-center justify-center`}>
+              <Image 
+                src={exp.logo} 
+                alt={`${exp.company} logo`} 
+                width={28} 
+                height={28} 
+                className="rounded-full"
+              />
             </div>
             
             <div className="flex items-start justify-between mb-2">
@@ -51,13 +68,12 @@ export default function ExperienceTab() {
             </p>
           </div>
         ))}
-
-        <div className="text-center py-4">
-          <p className="text-sm text-gray-500 dark:text-gray-400">{t('profile.showingResults')}</p>
-          <div className="mt-2">
-            <Button variant="outline" size="sm" className="w-8 h-8 p-0">1</Button>
-          </div>
-        </div>
+              
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          onPageChange={setCurrentPage}
+        />
       </div>
 
       {/* Volunteer Work Section */}
@@ -65,7 +81,9 @@ export default function ExperienceTab() {
         <h3 className="text-xl font-bold mb-4">{t('profile.volunteerWork')}</h3>
         
         {volunteerWork.map((work) => (
-          <div key={work.id} className="border-l-2 border-gray-200 dark:border-gray-700 pl-6 relative">
+          <div key={work.id} className="relative pl-6 pb-6">
+            <div className="absolute left-0 top-2 bottom-0 border-l-2 border-gray-200 dark:border-gray-700"></div>
+
             <div className={`absolute -left-2 top-0 w-4 h-4 ${work.logoColor} rounded-full flex items-center justify-center`}>
               <span className="text-white text-xs font-bold">{work.logo}</span>
             </div>

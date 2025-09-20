@@ -4,9 +4,17 @@ import './globals.css';
 
 const kanit = Kanit({
   subsets: ['thai'],
-  weight: ['300', '400', '500', '700'], // เลือกน้ำหนักตามต้องการ
+  weight: ['300', '400', '500', '700'],
   display: 'swap',
 });
+
+export const metadata = {
+  title: "teenapat",
+  description: "teenapat rattanawong's personal portfolio website",
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
 
 export default function RootLayout({
   children,

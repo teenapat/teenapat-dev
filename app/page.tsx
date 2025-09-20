@@ -1,4 +1,3 @@
-import CurriculumCard from '@/components/CurriculumCard';
 import LanguagesCard from '@/components/LanguagesCard';
 import MainContent from '@/components/MainContent';
 import PersonalDataCard from '@/components/PersonalDataCard';
@@ -13,7 +12,7 @@ export default function Home() {
         {/* Left Sidebar */}
         <div className="lg:col-span-1 space-y-6">
           <ProfileCard />
-          <CurriculumCard />
+          {/* <CurriculumCard /> */}
           <PersonalDataCard />
           <SkillsCard />
           <LanguagesCard />
