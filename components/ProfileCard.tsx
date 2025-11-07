@@ -37,7 +37,7 @@ export default function ProfileCard() {
         <div className="flex items-start space-x-4">
           <div className="relative w-16 h-16 flex-shrink-0">
             <Image
-              src="https://media.licdn.com/dms/image/v2/D5603AQFgIT1rUqMYWg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1721242062749?e=1760572800&v=beta&t=D4oRvnISA0uO00-H4SOuD5UIU0bRQ3llfx6wr_Xi6ZA"
+              src="/images/profile-me.jpg"
               alt="Teenapat Rattanawong"
               fill
               className="rounded-full object-cover"
@@ -56,7 +56,7 @@ export default function ProfileCard() {
               <a href="#" className="text-gray-400 hover:text-blue-500 transition-colors">
                 <Twitter size={16} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-blue-500 transition-colors">
+              <a href="https://www.linkedin.com/in/teenapat-rattanawong/" className="text-gray-400 hover:text-blue-500 transition-colors">
                 <Linkedin size={16} />
               </a>
               <a href="#" className="text-gray-400 hover:text-blue-500 transition-colors">

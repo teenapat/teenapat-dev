@@ -59,6 +59,19 @@ const config: Config = {
           '4': 'hsl(var(--chart-4))',
           '5': 'hsl(var(--chart-5))',
         },
+        night: {
+          DEFAULT: 'hsl(var(--night-500))',
+          50: 'hsl(var(--night-50))',
+          100: 'hsl(var(--night-100))',
+          200: 'hsl(var(--night-200))',
+          300: 'hsl(var(--night-300))',
+          400: 'hsl(var(--night-400))',
+          500: 'hsl(var(--night-500))',
+          600: 'hsl(var(--night-600))',
+          700: 'hsl(var(--night-700))',
+          800: 'hsl(var(--night-800))',
+          900: 'hsl(var(--night-900))',
+        },
       },
       keyframes: {
         'accordion-down': {

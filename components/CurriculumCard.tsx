@@ -15,9 +15,9 @@ export default function CurriculumCard() {
         <CardTitle className="text-lg">{t('profile.curriculum')}</CardTitle>
       </CardHeader>
       <CardContent>
-        <div className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
+        <div className="flex items-center justify-between p-3 bg-night-50 dark:bg-night-800 rounded-lg">
           <div className="flex items-center space-x-3">
-            <div className="w-8 h-8 bg-gray-200 dark:bg-gray-700 rounded flex items-center justify-center">
+            <div className="w-8 h-8 bg-night-200 dark:bg-night-700 rounded flex items-center justify-center">
               <span className="text-xs">📄</span>
             </div>
             <div>

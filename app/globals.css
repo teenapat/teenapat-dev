@@ -42,7 +42,17 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
-    --radius: 0.5rem;
+    --radius: 0.5rem; 
+    --night-50: 0, 0%, 100%;
+    --night-100: 248, 12%, 73%;
+    --night-200: 245, 11%, 57%;
+    --night-300: 240, 10%, 51%;
+    --night-400: 240, 15%, 30%;
+    --night-500: 240, 14%, 25%;
+    --night-600: 240, 15%, 14%;
+    --night-700: 234, 17%, 12%;
+    --night-800: 231, 15%, 9%;
+    --night-900: 240, 7%, 6%;
   }
   .dark {
     --background: 0 0% 3.9%;
@@ -70,6 +80,7 @@
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
+
 }
 
 @layer base {
@@ -78,5 +89,9 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+  
+  .card {
+    @apply rounded-xl bg-white p-7 dark:bg-night-800;
   }
 }
